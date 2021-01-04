@@ -86,13 +86,17 @@ CompilerSelect #PB_Compiler_OS
     CompilerError "Ошибка идентификации ОС"
 CompilerEndSelect
 
+PrintN("")
+PrintN("Запишите результаты!")
+PrintN("")
+Input()
 CloseConsole()
 
 End 0
 
 ; IDE Options = PureBasic 5.73 LTS (Windows - x64)
-; CursorPosition = 78
-; FirstLine = 28
+; CursorPosition = 89
+; FirstLine = 37
 ; EnableThread
 ; EnableXP
 ; CompileSourceDirectory
