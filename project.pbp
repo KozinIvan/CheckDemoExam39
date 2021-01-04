@@ -7,9 +7,14 @@
   <section name="data">
     <explorer view="C:\ProgramData\PureBasic\Examples\" pattern="0"/>
     <log show="1"/>
-    <lastopen date="2021-01-04 19:18" user="Kozin" host="DESKTOP-50L97QJ"/>
+    <lastopen date="2021-01-04 20:59" user="Kozin" host="KIPC"/>
   </section>
-  <section name="files"/>
+  <section name="files">
+    <file name="main.pb">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate=""/>
+      <fingerprint md5="2f81eb0f3d430815b2c0d54896fc7312"/>
+    </file>
+  </section>
   <section name="targets">
     <target name="Linux x64" enabled="1" default="1">
       <inputfile value=""/>
