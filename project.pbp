@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://www.purebasic.com/namespace" version="1.0" creator="PureBasic 5.73 LTS (Windows - x64)">
+  <section name="config">
+    <options closefiles="1" openmode="0" name="CheckDemoExam39"/>
+  </section>
+  <section name="data">
+    <explorer view="C:\ProgramData\PureBasic\Examples\" pattern="0"/>
+    <log show="1"/>
+    <lastopen date="2021-01-04 19:18" user="Kozin" host="DESKTOP-50L97QJ"/>
+  </section>
+  <section name="files"/>
+  <section name="targets">
+    <target name="Linux x64" enabled="1" default="1">
+      <inputfile value=""/>
+      <outputfile value=""/>
+      <options xpskin="1" admin="1" debug="1"/>
+    </target>
+    <target name="Windows x64" enabled="1" default="0">
+      <inputfile value=""/>
+      <outputfile value="compiled\check39.exe"/>
+      <compiler version="PureBasic 5.73 LTS (Windows - x64)"/>
+      <options xpskin="1" admin="1" debug="1"/>
+    </target>
+  </section>
+</project>
