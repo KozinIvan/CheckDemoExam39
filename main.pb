@@ -22,15 +22,6 @@ CompilerEndSelect
 ProgramVersion$ = "1.0"
 ProgramCopyright$ = "© KI Corporation"
 
-CompilerSelect #PB_Compiler_OS
-  CompilerCase #PB_OS_Linux
-    XIncludeFile "linux.pb"
-  CompilerCase #PB_OS_Windows
-    XIncludeFile "windows.pb"
-  CompilerDefault
-    CompilerError "Ошибка идентификации ОС"
-CompilerEndSelect
-
 OpenConsole(ProgramName$)
 
 SelectVM:
@@ -93,10 +84,9 @@ Input()
 CloseConsole()
 
 End 0
-
-; IDE Options = PureBasic 5.73 LTS (Windows - x64)
-; CursorPosition = 89
-; FirstLine = 37
+; IDE Options = PureBasic 5.73 LTS (Linux - x64)
+; CursorPosition = 23
+; FirstLine = 26
 ; EnableThread
 ; EnableXP
 ; CompileSourceDirectory

@@ -1,39 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project xmlns="http://www.purebasic.com/namespace" version="1.0" creator="PureBasic 5.73 LTS (Windows - x64)">
+<project xmlns="http://www.purebasic.com/namespace" version="1.0" creator="PureBasic 5.73 LTS (Linux - x64)">
   <section name="config">
     <options closefiles="1" openmode="0" name="CheckDemoExam39"/>
   </section>
   <section name="data">
-    <explorer view="C:\ProgramData\PureBasic\Examples\" pattern="0"/>
+    <explorer view="C:/ProgramData/PureBasic/Examples/" pattern="0"/>
     <log show="1"/>
-    <lastopen date="2021-01-04 23:35" user="Kozin" host="DESKTOP-50L97QJ"/>
+    <lastopen date="2021-01-04 23:49" user="administrator" host="L-CLI-A"/>
   </section>
   <section name="files">
-    <file name="main.pb">
-      <config load="0" scan="1" panel="1" warn="1" lastopen="0" panelstate="+"/>
-      <fingerprint md5="1eb14d05baa063ce68384a002c72be2e"/>
-    </file>
     <file name="linux.pb">
-      <config load="0" scan="1" panel="1" warn="1" lastopen="0" panelstate="+"/>
-      <fingerprint md5="80b260ef9a534d22f4b0f6410f8691b7"/>
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="+"/>
+      <fingerprint md5="5bf64a6ca346900e94d6a4d037615a40"/>
+    </file>
+    <file name="main.pb">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="+"/>
+      <fingerprint md5="25d8b94bbb58ff18bb585d5a488d381c"/>
     </file>
     <file name="windows.pb">
       <config load="0" scan="1" panel="1" warn="1" lastopen="0" panelstate="+"/>
-      <fingerprint md5="0d19b7bfa6d3dff20d5d459d186ac84d"/>
+      <fingerprint md5="cc013088534d53873dccb2d3e1a2e7ed"/>
     </file>
   </section>
   <section name="targets">
-    <target name="Windows x64" enabled="1" default="1">
+    <target name="Windows x64" enabled="1" default="0">
       <inputfile value="main.pb"/>
       <outputfile value="compiled\check39.exe"/>
-      <compiler version="PureBasic 5.73 LTS (Windows - x64)"/>
+      <compiler version="PureBasic 5.73 LTS (Linux - x64)"/>
       <options xpskin="1" admin="1" debug="1"/>
       <format exe="console" cpu="0"/>
     </target>
-    <target name="Linux x64" enabled="1" default="0">
+    <target name="Linux x64" enabled="1" default="1">
       <inputfile value="main.pb"/>
-      <outputfile value=""/>
+      <outputfile value="compiled/linux/check39"/>
+      <compiler version="PureBasic 5.73 LTS (Linux - x64)"/>
+      <executable value="compiled/linux/check39"/>
       <options xpskin="1" admin="1" debug="1"/>
       <format exe="console" cpu="0"/>
     </target>
