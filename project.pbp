@@ -7,25 +7,35 @@
   <section name="data">
     <explorer view="C:\ProgramData\PureBasic\Examples\" pattern="0"/>
     <log show="1"/>
-    <lastopen date="2021-01-04 20:59" user="Kozin" host="KIPC"/>
+    <lastopen date="2021-01-04 23:35" user="Kozin" host="DESKTOP-50L97QJ"/>
   </section>
   <section name="files">
     <file name="main.pb">
-      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate=""/>
-      <fingerprint md5="2f81eb0f3d430815b2c0d54896fc7312"/>
+      <config load="0" scan="1" panel="1" warn="1" lastopen="0" panelstate="+"/>
+      <fingerprint md5="1eb14d05baa063ce68384a002c72be2e"/>
+    </file>
+    <file name="linux.pb">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="0" panelstate="+"/>
+      <fingerprint md5="80b260ef9a534d22f4b0f6410f8691b7"/>
+    </file>
+    <file name="windows.pb">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="0" panelstate="+"/>
+      <fingerprint md5="0d19b7bfa6d3dff20d5d459d186ac84d"/>
     </file>
   </section>
   <section name="targets">
-    <target name="Linux x64" enabled="1" default="1">
-      <inputfile value=""/>
-      <outputfile value=""/>
-      <options xpskin="1" admin="1" debug="1"/>
-    </target>
-    <target name="Windows x64" enabled="1" default="0">
-      <inputfile value=""/>
+    <target name="Windows x64" enabled="1" default="1">
+      <inputfile value="main.pb"/>
       <outputfile value="compiled\check39.exe"/>
       <compiler version="PureBasic 5.73 LTS (Windows - x64)"/>
       <options xpskin="1" admin="1" debug="1"/>
+      <format exe="console" cpu="0"/>
+    </target>
+    <target name="Linux x64" enabled="1" default="0">
+      <inputfile value="main.pb"/>
+      <outputfile value=""/>
+      <options xpskin="1" admin="1" debug="1"/>
+      <format exe="console" cpu="0"/>
     </target>
   </section>
 </project>
