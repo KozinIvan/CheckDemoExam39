@@ -24,7 +24,6 @@ ProgramCopyright$ = "© KI Corporation"
 
 OpenConsole(ProgramName$)
 
-SelectVM:
 ClearConsole()
 PrintN("===========================================")
 PrintN("==                                       ==")
@@ -84,9 +83,9 @@ Input()
 CloseConsole()
 
 End 0
-; IDE Options = PureBasic 5.73 LTS (Linux - x64)
-; CursorPosition = 23
-; FirstLine = 26
+; IDE Options = PureBasic 5.73 LTS (Windows - x64)
+; CursorPosition = 26
+; FirstLine = 9
 ; EnableThread
 ; EnableXP
 ; CompileSourceDirectory
