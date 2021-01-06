@@ -110,10 +110,11 @@ SRV2\Test\TestBO2 = "R2." + SRV2\Domain
 
 IncludeFile "B.O1.pb" ; Критерий O1
 IncludeFile "B.O2.pb" ; Критерий O2
+IncludeFile "B.O3.pb" ; Критерий O2
 
 Print("Проверка O1: ") : If CheckO1(VMName$) : PrintN("Выполнено") : Else : PrintN("Не выполнено") : EndIf
 Print("Проверка O2: ") : If CheckO2(VMName$) : PrintN("Выполнено") : Else : PrintN("Не выполнено") : EndIf
-; Print("Проверка O3: ") : If CheckO3(VMName$) : PrintN("Выполнено") : Else : PrintN("Не выполнено") : EndIf
+Print("Проверка O3: ") : If CheckO3(VMName$) : PrintN("Выполнено") : Else : PrintN("Не выполнено") : EndIf
 ; Print("Проверка O4: ") : If CheckO4(VMName$) : PrintN("Выполнено") : Else : PrintN("Не выполнено") : EndIf
 ; Print("Проверка O5: ") : If CheckO5(VMName$) : PrintN("Выполнено") : Else : PrintN("Не выполнено") : EndIf
 ; Print("Проверка O6: ") : If CheckO6(VMName$) : PrintN("Выполнено") : Else : PrintN("Не выполнено") : EndIf
@@ -149,6 +150,6 @@ Print("Проверка O2: ") : If CheckO2(VMName$) : PrintN("Выполнен�
 ; Print("Проверка O36: ") : If CheckO36(VMName$) : PrintN("Выполнено") : Else : PrintN("Не выполнено") : EndIf
 
 ; IDE Options = PureBasic 5.73 LTS (Windows - x64)
-; CursorPosition = 42
-; FirstLine = 27
+; CursorPosition = 116
+; FirstLine = 91
 ; EnableXP
