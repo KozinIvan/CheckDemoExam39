@@ -17,10 +17,16 @@ Structure VMInterface
   Mask.s
 EndStructure
 
+Structure VMTest
+  TestBO1.s
+  TestBO2.s
+EndStructure
+
 Structure VM
   Name.s
   Domain.s
   Array Interfaces.VMInterface(3)
+  Test.VMTest
 EndStructure
 
 ; IDE Options = PureBasic 5.73 LTS (Windows - x64)

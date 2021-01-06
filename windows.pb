@@ -20,6 +20,7 @@ CLI1\Domain = "kazan.wsr"
 CLI1\Interfaces(0)\IPAddress = "172.16.19.68" ; DHCP ?
 CLI1\Interfaces(0)\Mask = "255.255.255.192"
 CLI1\Interfaces(0)\Name = "Ethernet0"
+CLI1\Test\TestBO2 = "R1." + CLI1\Domain
 
 ;-CLI2
 
@@ -29,6 +30,7 @@ CLI2\Domain = "spb.wse"
 CLI2\Interfaces(0)\IPAddress = "172.168.20.99" ; DHCP ?
 CLI2\Interfaces(0)\Mask = "255.255.255.224"
 CLI2\Interfaces(0)\Name = "Ethernet0"
+CLI2\Test\TestBO2 = "R2." + CLI2\Domain
 
 ;-DC1
 
@@ -38,6 +40,7 @@ DC1\Domain = "kazan.wsr"
 DC1\Interfaces(0)\IPAddress = "172.16.19.65"
 DC1\Interfaces(0)\Mask = "255.255.255.192"
 DC1\Interfaces(0)\Name = "Ethernet0"
+DC1\Test\TestBO2 = "R1." + DC1\Domain
 
 ;-DC2
 
@@ -47,6 +50,7 @@ DC2\Domain = "spb.wse"
 DC2\Interfaces(0)\IPAddress = "172.16.20.97"
 DC2\Interfaces(0)\Mask = "255.255.255.224"
 DC2\Interfaces(0)\Name = "Ethernet0"
+DC2\Test\TestBO2 = "R2." + DC2\Domain
 
 ;-DCA
 
@@ -56,6 +60,7 @@ DCA\Domain = "kazan.wsr"
 DCA\Interfaces(0)\IPAddress = "172.16.19.67"
 DCA\Interfaces(0)\Mask = "255.255.255.192"
 DC2\Interfaces(0)\Name = "Ethernet0"
+DC2\Test\TestBO2 = "R1." + DCA\Domain
 
 ;-R1
 
@@ -68,6 +73,7 @@ R1\Interfaces(0)\Name = "Ethernet0"
 R1\Interfaces(1)\IPAddress = "200.100.100.2"
 R1\Interfaces(1)\Mask = "255.255.255.252"
 R1\Interfaces(1)\Name = "Ethernet1"
+R1\Test\TestBO2 = "200.100.100.1"
 
 ;-R2
 
@@ -80,20 +86,33 @@ R2\Interfaces(0)\Name = "Ethernet0"
 R2\Interfaces(1)\IPAddress = "200.100.100.1"
 R2\Interfaces(1)\Mask = "255.255.255.252"
 R2\Interfaces(1)\Name = "Ethernet1"
+R2\Test\TestBO2 = "200.100.100.2"
 
 ;-SRV1
 
 Global SRV1.VM
+SRV1\Name = "SRV1"
+SRV1\Domain = "kazan.wsr"
+SRV1\Interfaces(0)\IPAddress = "172.16.19.66"
+SRV1\Interfaces(0)\Mask = "255.255.255.192"
+SRV1\Interfaces(0)\Name = "Ethernet0"
+SRV1\Test\TestBO2 = "R1." + SRV1\Domain
 
 ;-SRV2
 
 Global SRV2.VM
+SRV2\Name = "SRV2"
+SRV2\Domain = "spb.wse"
+SRV2\Interfaces(0)\IPAddress = "172.16.20.98"
+SRV2\Interfaces(0)\Mask = "255.255.255.224"
+SRV2\Interfaces(0)\Name = "Ethernet0"
+SRV2\Test\TestBO2 = "R2." + SRV2\Domain
 
 IncludeFile "B.O1.pb" ; Критерий O1
 IncludeFile "B.O2.pb" ; Критерий O2
 
 Print("Проверка O1: ") : If CheckO1(VMName$) : PrintN("Выполнено") : Else : PrintN("Не выполнено") : EndIf
-; Print("Проверка O2: ") : If CheckO2(VMName$) : PrintN("Выполнено") : Else : PrintN("Не выполнено") : EndIf
+Print("Проверка O2: ") : If CheckO2(VMName$) : PrintN("Выполнено") : Else : PrintN("Не выполнено") : EndIf
 ; Print("Проверка O3: ") : If CheckO3(VMName$) : PrintN("Выполнено") : Else : PrintN("Не выполнено") : EndIf
 ; Print("Проверка O4: ") : If CheckO4(VMName$) : PrintN("Выполнено") : Else : PrintN("Не выполнено") : EndIf
 ; Print("Проверка O5: ") : If CheckO5(VMName$) : PrintN("Выполнено") : Else : PrintN("Не выполнено") : EndIf
@@ -130,6 +149,6 @@ Print("Проверка O1: ") : If CheckO1(VMName$) : PrintN("Выполнен�
 ; Print("Проверка O36: ") : If CheckO36(VMName$) : PrintN("Выполнено") : Else : PrintN("Не выполнено") : EndIf
 
 ; IDE Options = PureBasic 5.73 LTS (Windows - x64)
-; CursorPosition = 92
-; FirstLine = 66
+; CursorPosition = 42
+; FirstLine = 27
 ; EnableXP

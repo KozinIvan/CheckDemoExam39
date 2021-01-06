@@ -12,27 +12,37 @@
 
 Procedure CheckO2(VMName$)
   
-  
+  TestTo.s
+  InterfaceName.s
   
   Select VMName$
     Case "CLI1"
-      
+      TestTo = CLI1\Test\TestBO2
+      InterfaceName = CLI1\Interfaces(0)\Name
     Case "CLI2"
-      
+      TestTo = CLI2\Test\TestBO2
+      InterfaceName = CLI2\Interfaces(0)\Name
     Case "DC1"
-      
+      TestTo = DC1\Test\TestBO2
+      InterfaceName = DC1\Interfaces(0)\Name
     Case "DC2"
-      
+      TestTo = DC2\Test\TestBO2
+      InterfaceName = DC2\Interfaces(0)\Name
     Case "DCA"
-      
+      TestTo = DCA\Test\TestBO2
+      InterfaceName = DCA\Interfaces(0)\Name
     Case "R1"
-      
+      TestTo = R1\Test\TestBO2
+      InterfaceName = R1\Interfaces(0)\Name
     Case "R2"
-      
+      TestTo = R2\Test\TestBO2
+      InterfaceName = R2\Interfaces(0)\Name
     Case "SRV1"
-      
+      TestTo = SRV1\Test\TestBO2
+      InterfaceName = SRV1\Interfaces(0)\Name
     Case "SRV2"
-      
+      TestTo = SRV2\Test\TestBO2
+      InterfaceName = SRV2\Interfaces(0)\Name
     Default
       ProcedureReturn #False
   EndSelect
@@ -58,15 +68,19 @@ Procedure CheckO2(VMName$)
       
       Output$ = ReadProgramString(Program)
       
-      If FindString(Output$, "IPv4Address")
+      If FindString(Output$, "PingSucceeded")
         
-        If Right(Output$, Len(NetworkIP(0))) = NetworkIP(0)
+        If Right(Output$, Len("True")) = "True"
           
           Check(0) = #True
           
         EndIf
         
-        If Right(Output$, Len(NetworkIP(1))) = NetworkIP(1)
+      EndIf
+      
+      If FindString(Output$, "NetworkCategory")
+        
+        If Right(Output$, Len("Private")) = "Private" Or Right(Output$, Len("Domain")) = "Domain"
           
           Check(1) = #True
           
@@ -78,13 +92,11 @@ Procedure CheckO2(VMName$)
       
       Select State
         Case 0
-          WriteProgramStringN(Program, "Get-NetIPConfiguration -InterfaceAlias " + InterfaceName(0)) : State + 1
+          WriteProgramStringN(Program, "Test-NetConnection -ComputerName " + TestTo) : State + 1
         Case 1
-          If VMName$ = "R1" Or VMName$ = "R2"
-            WriteProgramStringN(Program, "Get-NetIPConfiguration -InterfaceAlias " + InterfaceName(1)) : State + 1
-          Else
-            WriteProgramStringN(Program, "Exit") : State + 1
-          EndIf
+          WriteProgramStringN(Program, "Get-NetConnectionProfile -InterfaceAlias " + InterfaceName) : State + 1
+        Case 2
+          WriteProgramStringN(Program, "Exit") : State + 1
       EndSelect
       
     EndIf
@@ -96,7 +108,7 @@ Procedure CheckO2(VMName$)
 EndProcedure
 
 ; IDE Options = PureBasic 5.73 LTS (Windows - x64)
-; CursorPosition = 46
-; FirstLine = 38
+; CursorPosition = 82
+; FirstLine = 70
 ; Folding = -
 ; EnableXP
