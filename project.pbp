@@ -7,20 +7,20 @@
   <section name="data">
     <explorer view="C:\ProgramData\PureBasic\Examples\" pattern="0"/>
     <log show="1"/>
-    <lastopen date="2021-01-06 11:40" user="Administrator" host="DC1"/>
+    <lastopen date="2021-01-07 01:24" user="Kozin" host="DESKTOP-50L97QJ"/>
   </section>
   <section name="files">
     <file name="B.O1.pb">
-      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="+"/>
-      <fingerprint md5="d216b3d3d8d9193ab81fc8314ecf306c"/>
+      <config load="0" scan="1" panel="1" warn="1" lastopen="0" panelstate="+"/>
+      <fingerprint md5="f24580eb479a2c1fec9e93ba51bcc2ab"/>
     </file>
     <file name="B.O2.pb">
-      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="+"/>
-      <fingerprint md5="79b06699ead1cb8e9a74740f3a932b8e"/>
+      <config load="0" scan="1" panel="1" warn="1" lastopen="0" panelstate="+"/>
+      <fingerprint md5="2e43f3d2968b77720b182a03df7e79c7"/>
     </file>
     <file name="B.O3.pb">
-      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="+"/>
-      <fingerprint md5="7860ef445e1dbd6bc2a4ce9a23f0ea2c"/>
+      <config load="0" scan="1" panel="1" warn="1" lastopen="0" panelstate="+"/>
+      <fingerprint md5="fb76deed97842726fd21169730259dff"/>
     </file>
     <file name="linux.pb">
       <config load="0" scan="1" panel="1" warn="1" lastopen="0" panelstate="+"/>
@@ -36,7 +36,7 @@
     </file>
     <file name="windows.pb">
       <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="+"/>
-      <fingerprint md5="aa7572714fb3066914374bb944c88f63"/>
+      <fingerprint md5="202d725cd93465e57cd79447e4246f7d"/>
     </file>
   </section>
   <section name="targets">

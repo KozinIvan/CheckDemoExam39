@@ -12,6 +12,8 @@
 
 Procedure CheckO3(VMName$)
   
+  Debug "Запуск CheckO3"
+  
   DomainName.s
   
   Select VMName$
@@ -30,7 +32,7 @@ Procedure CheckO3(VMName$)
   
   While ProgramRunning(Program)
     
-    If Check(0) = #True
+    If Check(0)
       
       KillProgram(Program)
       
@@ -46,6 +48,7 @@ Procedure CheckO3(VMName$)
         
         If LCase(Right(Output$, Len(DomainName))) = LCase(DomainName)
           
+          Debug "  Check(0)/Domain:" + DomainName
           Check(0) = #True
           
         EndIf
@@ -70,7 +73,7 @@ Procedure CheckO3(VMName$)
 EndProcedure
 
 ; IDE Options = PureBasic 5.73 LTS (Windows - x64)
-; CursorPosition = 46
-; FirstLine = 27
+; CursorPosition = 50
+; FirstLine = 14
 ; Folding = -
 ; EnableXP

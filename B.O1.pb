@@ -12,7 +12,7 @@
 
 Procedure CheckO1(VMName$)
   
-  Debug ""
+  Debug "Запуск CheckO1"
   
   Dim NetworkIP.s(1)
   Dim NetworkMask.s(1)
@@ -74,11 +74,21 @@ Procedure CheckO1(VMName$)
   
   While ProgramRunning(Program)
     
-    If Check(0) = #True And Check(1) = #True
+    If Check(0)
       
-      KillProgram(Program)
-      
-      ProcedureReturn #True
+      If (VMName$ = "R1" Or VMName$ = "R2") And Check(1)
+        
+        KillProgram(Program)
+        
+        ProcedureReturn #True
+        
+      Else
+        
+        KillProgram(Program)
+        
+        ProcedureReturn #True
+        
+      EndIf
       
     EndIf
     
@@ -88,17 +98,17 @@ Procedure CheckO1(VMName$)
       
       If FindString(Output$, "IPv4Address")
         
-        If Right(Output$, Len(NetworkIP(0))) = NetworkIP(0)
+        For i = 0 To 1
           
-          Check(0) = #True
+          If Right(Output$, Len(NetworkIP(i))) = NetworkIP(i)
+            
+            Debug "  Check(" + Str(i) + ")/" + Right(Output$, Len(NetworkIP(i)))
+            
+            Check(i) = #True
+            
+          EndIf
           
-        EndIf
-        
-        If Right(Output$, Len(NetworkIP(1))) = NetworkIP(1)
-          
-          Check(1) = #True
-          
-        EndIf
+        Next i
         
       EndIf
       
@@ -124,6 +134,7 @@ Procedure CheckO1(VMName$)
 EndProcedure
 
 ; IDE Options = PureBasic 5.73 LTS (Windows - x64)
-; CursorPosition = 14
+; CursorPosition = 104
+; FirstLine = 74
 ; Folding = -
 ; EnableXP

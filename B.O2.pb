@@ -12,6 +12,8 @@
 
 Procedure CheckO2(VMName$)
   
+  Debug "Запуск CheckO2"
+  
   TestTo.s
   InterfaceName.s
   
@@ -56,7 +58,7 @@ Procedure CheckO2(VMName$)
   
   While ProgramRunning(Program)
     
-    If Check(0) = #True And Check(1) = #True
+    If Check(0) And Check(1)
       
       KillProgram(Program)
       
@@ -72,6 +74,8 @@ Procedure CheckO2(VMName$)
         
         If Right(Output$, Len("True")) = "True"
           
+          Debug "  Check(0)/PingSucceeded:True"
+          
           Check(0) = #True
           
         EndIf
@@ -81,6 +85,8 @@ Procedure CheckO2(VMName$)
       If FindString(Output$, "NetworkCategory")
         
         If Right(Output$, Len("Private")) = "Private" Or Right(Output$, Len("Domain")) = "Domain"
+          
+          Debug "  Check(1)/NetworkCategory:" + Trim(Right(Output$, Len("Private")))
           
           Check(1) = #True
           
@@ -108,7 +114,7 @@ Procedure CheckO2(VMName$)
 EndProcedure
 
 ; IDE Options = PureBasic 5.73 LTS (Windows - x64)
-; CursorPosition = 82
-; FirstLine = 70
+; CursorPosition = 59
+; FirstLine = 37
 ; Folding = -
 ; EnableXP
