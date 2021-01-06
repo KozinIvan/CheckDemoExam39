@@ -42,17 +42,11 @@ Procedure CheckO3(VMName$)
       
       Output$ = ReadProgramString(Program)
       
-      If FindString(Output$, "IPv4Address")
+      If FindString(Output$, "Domain")
         
-        If Right(Output$, Len(NetworkIP(0))) = NetworkIP(0)
+        If LCase(Right(Output$, Len(DomainName))) = LCase(DomainName)
           
           Check(0) = #True
-          
-        EndIf
-        
-        If Right(Output$, Len(NetworkIP(1))) = NetworkIP(1)
-          
-          Check(1) = #True
           
         EndIf
         
@@ -62,7 +56,7 @@ Procedure CheckO3(VMName$)
       
       Select State
         Case 0
-          WriteProgramStringN(Program, "Get-NetIPConfiguration -InterfaceAlias " + InterfaceName(0)) : State + 1
+          WriteProgramStringN(Program, "Get-ADDomainController") : State + 1
         Case 1
           WriteProgramStringN(Program, "Exit") : State + 1
       EndSelect
@@ -76,7 +70,7 @@ Procedure CheckO3(VMName$)
 EndProcedure
 
 ; IDE Options = PureBasic 5.73 LTS (Windows - x64)
-; CursorPosition = 66
-; FirstLine = 18
+; CursorPosition = 46
+; FirstLine = 27
 ; Folding = -
 ; EnableXP

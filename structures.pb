@@ -18,7 +18,6 @@ Structure VMInterface
 EndStructure
 
 Structure VMTest
-  TestBO1.s
   TestBO2.s
 EndStructure
 
@@ -30,5 +29,5 @@ Structure VM
 EndStructure
 
 ; IDE Options = PureBasic 5.73 LTS (Windows - x64)
-; CursorPosition = 21
+; CursorPosition = 19
 ; EnableXP

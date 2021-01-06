@@ -12,6 +12,8 @@
 
 Procedure CheckO1(VMName$)
   
+  Debug ""
+  
   Dim NetworkIP.s(1)
   Dim NetworkMask.s(1)
   Dim InterfaceName.s(1)
@@ -122,7 +124,6 @@ Procedure CheckO1(VMName$)
 EndProcedure
 
 ; IDE Options = PureBasic 5.73 LTS (Windows - x64)
-; CursorPosition = 90
-; FirstLine = 50
+; CursorPosition = 14
 ; Folding = -
 ; EnableXP
