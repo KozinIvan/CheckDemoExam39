@@ -7,7 +7,7 @@
   <section name="data">
     <explorer view="C:\ProgramData\PureBasic\Examples\" pattern="0"/>
     <log show="1"/>
-    <lastopen date="2021-01-07 01:24" user="Kozin" host="DESKTOP-50L97QJ"/>
+    <lastopen date="2021-01-07 15:24" user="Kozin" host="DESKTOP-50L97QJ"/>
   </section>
   <section name="files">
     <file name="B.O1.pb">
@@ -36,7 +36,15 @@
     </file>
     <file name="windows.pb">
       <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="+"/>
-      <fingerprint md5="202d725cd93465e57cd79447e4246f7d"/>
+      <fingerprint md5="2a0da23092898e514361e32fa062ab6b"/>
+    </file>
+    <file name="B.O4.pb">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="0" panelstate="+"/>
+      <fingerprint md5="4882c61937d3e3f984d09337d3d18824"/>
+    </file>
+    <file name="B.O5.pb">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="0" panelstate="+"/>
+      <fingerprint md5="7fdb72f8e18323ad7facf402ddd9862f"/>
     </file>
   </section>
   <section name="targets">

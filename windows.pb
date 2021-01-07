@@ -111,12 +111,45 @@ SRV2\Test\TestBO2 = "R2." + SRV2\Domain
 IncludeFile "B.O1.pb"
 IncludeFile "B.O2.pb"
 IncludeFile "B.O3.pb"
+IncludeFile "B.O4.pb"
+IncludeFile "B.O5.pb"
+; IncludeFile "B.O6.pb"
+; IncludeFile "B.O7.pb"
+; IncludeFile "B.O8.pb"
+; IncludeFile "B.O9.pb"
+; IncludeFile "B.O10.pb"
+; IncludeFile "B.O11.pb"
+; IncludeFile "B.O12.pb"
+; IncludeFile "B.O13.pb"
+; IncludeFile "B.O14.pb"
+; IncludeFile "B.O15.pb"
+; IncludeFile "B.O16.pb"
+; IncludeFile "B.O17.pb"
+; IncludeFile "B.O18.pb"
+; IncludeFile "B.O19.pb"
+; IncludeFile "B.O20.pb"
+; IncludeFile "B.O21.pb"
+; IncludeFile "B.O22.pb"
+; IncludeFile "B.O23.pb"
+; IncludeFile "B.O24.pb"
+; IncludeFile "B.O25.pb"
+; IncludeFile "B.O26.pb"
+; IncludeFile "B.O27.pb"
+; IncludeFile "B.O28.pb"
+; IncludeFile "B.O29.pb"
+; IncludeFile "B.O30.pb"
+; IncludeFile "B.O31.pb"
+; IncludeFile "B.O32.pb"
+; IncludeFile "B.O33.pb"
+; IncludeFile "B.O34.pb"
+; IncludeFile "B.O35.pb"
+; IncludeFile "B.O36.pb"
 
 Print("Проверка O1: ") : If CheckO1(VMName$) : PrintN("Выполнено") : Else : PrintN("Не выполнено") : EndIf
 Print("Проверка O2: ") : If CheckO2(VMName$) : PrintN("Выполнено") : Else : PrintN("Не выполнено") : EndIf
 Print("Проверка O3: ") : If CheckO3(VMName$) : PrintN("Выполнено") : Else : PrintN("Не выполнено") : EndIf
-; Print("Проверка O4: ") : If CheckO4(VMName$) : PrintN("Выполнено") : Else : PrintN("Не выполнено") : EndIf
-; Print("Проверка O5: ") : If CheckO5(VMName$) : PrintN("Выполнено") : Else : PrintN("Не выполнено") : EndIf
+Print("Проверка O4: ") : If CheckO4(VMName$) : PrintN("Выполнено") : Else : PrintN("Не выполнено") : EndIf
+Print("Проверка O5: ") : If CheckO5(VMName$) : PrintN("Выполнено") : Else : PrintN("Не выполнено") : EndIf
 ; Print("Проверка O6: ") : If CheckO6(VMName$) : PrintN("Выполнено") : Else : PrintN("Не выполнено") : EndIf
 ; Print("Проверка O7: ") : If CheckO7(VMName$) : PrintN("Выполнено") : Else : PrintN("Не выполнено") : EndIf
 ; Print("Проверка O8: ") : If CheckO8(VMName$) : PrintN("Выполнено") : Else : PrintN("Не выполнено") : EndIf
@@ -150,6 +183,6 @@ Print("Проверка O3: ") : If CheckO3(VMName$) : PrintN("Выполнен�
 ; Print("Проверка O36: ") : If CheckO36(VMName$) : PrintN("Выполнено") : Else : PrintN("Не выполнено") : EndIf
 
 ; IDE Options = PureBasic 5.73 LTS (Windows - x64)
-; CursorPosition = 113
-; FirstLine = 91
+; CursorPosition = 151
+; FirstLine = 101
 ; EnableXP
